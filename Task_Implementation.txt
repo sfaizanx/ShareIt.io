@@ -1,0 +1,6 @@
+1. Deciding and Enhancing UI --> https://readdy.link/share/df9749cc4c0659d4fedb92c341121f60
+2. Creating Room (QR and Random Codes)
+3. Multiple Languages
+4. Accepting files only when user accept
+5. Creating ProfilePic from the Name Like-->[SF]
+6. Dark Theme
