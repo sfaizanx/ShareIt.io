@@ -10,13 +10,13 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // your React frontend URL
+    origin: "http://localhost:5173", 
     methods: ["GET", "POST"],
   },
 });
 
-let users = {}; // { socketId: username }
-let usernames = {}; // { username: socketId }
+let users = {}; 
+let usernames = {}; 
 
 io.on("connection", (socket) => {
   console.log("🟢 User connected:", socket.id);
@@ -38,6 +38,16 @@ io.on("connection", (socket) => {
       });
     }
   });
+
+  socket.on("send-text", (data) => {
+    const { to, text } = data;
+    const targetSocketId = usernames[to];
+
+    if (targetSocketId) 
+      io.to(targetSocketId).emit("receive-text", { text, from: socket.id });
+    console.log(text, targetSocketId)
+  });
+
 
   socket.on("disconnect", () => {
     const username = users[socket.id];

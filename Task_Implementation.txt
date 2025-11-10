@@ -2,5 +2,10 @@
 2. Creating Room (QR and Random Codes)
 3. Multiple Languages
 4. Accepting files only when user accept
-5. Creating ProfilePic from the Name Like-->[SF]
 6. Dark Theme
+
+
+
+
+5. Creating ProfilePic from the Name Like-->[SF]
+7. Sending plain text 
