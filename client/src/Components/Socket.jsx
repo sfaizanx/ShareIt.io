@@ -8,6 +8,7 @@ import React, {
 import { io } from "socket.io-client";
 import { BASE_URL } from "../Constant/constant";
 import TextModal from "./TextModal";
+import Room from "./Room";
 
 const socket = io(BASE_URL, { transports: ["websocket"] });
 
@@ -219,8 +220,11 @@ const SocketFileShare = React.memo(() => {
         setReadText={setReadText}
         selectedUser={selectedUser}
       />
+
+      <Room socket={socket} />
     </div>
   );
 });
 
 export default SocketFileShare;
+
