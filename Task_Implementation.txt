@@ -5,7 +5,5 @@
 6. Dark Theme
 
 
-
-
 5. Creating ProfilePic from the Name Like-->[SF]
 7. Sending plain text 

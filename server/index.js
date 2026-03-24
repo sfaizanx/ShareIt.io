@@ -44,7 +44,7 @@ io.on("connection", (socket) => {
     const targetSocketId = usernames[to];
 
     if (targetSocketId)
-      io.to(targetSocketId).emit("receive-text", { text, from: socket.id });
+      io.to(targetSocketId).emit("receive-text", { text, from: users[socket.id] });
     console.log(text, targetSocketId)
   });
 
