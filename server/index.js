@@ -4,7 +4,13 @@ import { Server } from "socket.io";
 import cors from "cors";
 
 const app = express();
+app.use(express.json());
+
 app.use(cors());
+
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Backend working on Vercel 🚀" });
+});
 
 const server = http.createServer(app);
 const io = new Server(server, {
